@@ -1,5 +1,6 @@
-package com.callegasdev;
+package com.callegasdev.computer;
 
+import com.callegasdev.computer.resources.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +34,6 @@ public class App {
                         new Processor("AMD", "FD8300WMHKBOX", 3.300)
                 ).build();
         LOGGER.info(winston.toString());
-
 
     }
 

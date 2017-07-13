@@ -1,28 +1,28 @@
-package com.callegasdev;
+package com.callegasdev.computer.resources;
 
 /**
  * Created by callegas on 13/07/17.
  */
-public class MotherBoard {
+public class HardDisk {
     private String manufacturer;
     private String model;
-    private String chipset;
+    private Integer capacityInGB;
 
-    public MotherBoard(String manufacturer, String model, String chipset) {
+    public HardDisk(String manufacturer, String model, Integer capacityInGB) {
         this.manufacturer = manufacturer;
         this.model = model;
-        this.chipset = chipset;
+        this.capacityInGB = capacityInGB;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("MOTHERBOARD: ")
+        sb.append("HARDDISK: ")
                 .append(manufacturer)
                 .append(" ")
                 .append(model)
                 .append(" ")
-                .append(chipset)
+                .append(capacityInGB + "GB")
                 .append(".");
         return sb.toString();
     }

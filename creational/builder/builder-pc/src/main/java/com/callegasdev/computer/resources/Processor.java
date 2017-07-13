@@ -1,4 +1,4 @@
-package com.callegasdev;
+package com.callegasdev.computer.resources;
 
 /**
  * Created by callegas on 13/07/17.

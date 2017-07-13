@@ -1,32 +1,28 @@
-package com.callegasdev;
+package com.callegasdev.computer.resources;
 
 /**
  * Created by callegas on 13/07/17.
  */
-public class RAMMemory {
+public class MotherBoard {
     private String manufacturer;
     private String model;
-    private String type;
-    private Integer capacityInGB;
+    private String chipset;
 
-    public RAMMemory(String manufacturer, String model, String type, Integer capacityInGB) {
+    public MotherBoard(String manufacturer, String model, String chipset) {
         this.manufacturer = manufacturer;
         this.model = model;
-        this.type = type;
-        this.capacityInGB = capacityInGB;
+        this.chipset = chipset;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("RAM: ")
+        sb.append("MOTHERBOARD: ")
                 .append(manufacturer)
                 .append(" ")
                 .append(model)
                 .append(" ")
-                .append(type)
-                .append(" ")
-                .append(capacityInGB + "GB")
+                .append(chipset)
                 .append(".");
         return sb.toString();
     }
