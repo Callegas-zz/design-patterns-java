@@ -1,22 +1,16 @@
 package com.callegasdev;
 
-import com.callegasdev.genji.Skills.Deflect;
-import com.callegasdev.genji.Skills.Dragonblade;
-import com.callegasdev.genji.Skills.SwiftStrike;
-import com.callegasdev.genji.Genji;
+import com.callegasdev.genji.GenjiBuilder;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Genji genjiDeflect = new Genji(new Deflect(120));
-        genjiDeflect.goToFight();
+        GenjiBuilder genji = new GenjiBuilder();
 
-        Genji genjiSwiftStrike = new Genji(new SwiftStrike());
-        genjiSwiftStrike.goToFight();
-
-        Genji genjiDragonblade = new Genji(new Dragonblade());
-        genjiDragonblade.goToFight();
+        genji.execute("counterattack");
+        genji.execute("dash");
+        genji.execute("ultimate");
 
     }
 

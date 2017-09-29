@@ -8,10 +8,6 @@ public class Genji {
         this.strategy = strategy;
     }
 
-    public void choiceStrategy(GenjiStrategy strategy) {
-        this.strategy = strategy;
-    }
-
     public void goToFight() {
         strategy.attack();
     }
