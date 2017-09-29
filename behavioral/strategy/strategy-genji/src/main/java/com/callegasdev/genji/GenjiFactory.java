@@ -8,22 +8,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class GenjiBuilder {
+public class GenjiFactory {
 
-    private Genji genjiBuilded;
+    private Genji genji;
 
-    public void execute(String strategyType){
-        genjiBuilded = new Genji(strategyBuilder().get(strategyType));
-        genjiBuilded.goToFight();
-    }
-
-    private Map<String, GenjiStrategy> strategyBuilder() {
+    public GenjiFactory(String strategyType) {
         Map<String, GenjiStrategy> strategies = new HashMap<>();
 
-        strategies.put("counterattack", new Deflect(new Random().nextInt()));
+        strategies.put("counterattack", new Deflect(new Random().nextInt(150)));
         strategies.put("dash", new SwiftStrike());
         strategies.put("ultimate", new Dragonblade());
 
-        return strategies;
+        this.genji = new Genji(strategies.get(strategyType));
     }
+
+    public void execute(){
+        this.genji.goToFight();
+    }
+
 }

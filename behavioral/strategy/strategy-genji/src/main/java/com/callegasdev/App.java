@@ -1,17 +1,14 @@
 package com.callegasdev;
 
-import com.callegasdev.genji.GenjiBuilder;
+import com.callegasdev.genji.GenjiFactory;
 
 public class App {
 
     public static void main(String[] args) {
 
-        GenjiBuilder genji = new GenjiBuilder();
-
-        genji.execute("counterattack");
-        genji.execute("dash");
-        genji.execute("ultimate");
-
+        new GenjiFactory("counterattack").execute();
+        new GenjiFactory("dash").execute();
+        new GenjiFactory("ultimate").execute();
     }
 
 }
