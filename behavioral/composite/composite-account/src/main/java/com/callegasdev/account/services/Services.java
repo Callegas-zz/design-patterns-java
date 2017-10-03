@@ -6,9 +6,9 @@ public class Services {
     private StandartServices standartServices = new StandartServices();
     private PremiumServices premiumServices = new PremiumServices();
 
-    public void setServices(List<String> standart, List<String> premiums){
+    public void setServices(List<String> standart, List<String> premium){
         standartServices.setServices(standart);
-        premiumServices.setServices(premiums);
+        premiumServices.setServices(premium);
     }
 
     public String[] getServices(){
